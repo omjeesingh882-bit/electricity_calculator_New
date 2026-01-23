@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        input, button {
+            padding: 10px;
+            width: 90%;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Electricity Bill Calculator</h2>
+    <form method="post">
+        <input type="number" name="units" placeholder="Enter units" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if bill is not none %}
+        <h3>Total Bill: ₹ {{ bill }}</h3>
+    {% endif %}
+</div>
+
+</body>
+</html>
